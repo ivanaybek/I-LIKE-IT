@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I LIKE IT Hakkında</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:wght@300&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            font-family: calibri, sans-serif;
+        }
+
+        body {
+            background-color: #323a42;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 60px; /* Footer için boşluk */
+        }
+
+        ::selection {
+            color: black;
+            background-color: #d33639;
+        }
+
+        #header {
+            background-color: #45668e;
+            width: 100%;
+            height: 82px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            position: relative;
+        }
+
+        #header-img {
+            height: 52px;
+            width: 52px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            object-fit: cover;
+        }
+
+        #header-img:hover {
+            filter: saturate(2);
+        }
+
+        #line {
+            font-family: roboto, sans-serif;
+            font-size: 45px;
+            margin: 0 10px;
+            color: #000;
+        }
+
+        #header-h1 {
+            font-family: kalam, cursive;
+            font-size: 32px;
+            cursor: pointer;
+            transition-duration: 0.1s;
+        }
+
+        #header-h1:active {
+            transform: translateY(2px);
+        }
+
+        #header-h1:hover {
+            color: #323a42;    
+        }
+
+        .header-right-group {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        #header-menu, #header-help {
+            width: 50px;
+            height: 45px;
+            border: 0;
+            border-radius: 8px;
+            outline: none;
+            cursor: pointer;
+            font-size: 22px;
+            background: linear-gradient(135deg, #9b27ca 0%, #9927cf 0%, #d33639 100%, #f92121 100%);
+            color: white;
+            transition-duration: 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #header-menu:hover, #header-help:hover {
+            filter: saturate(2);
+        }
+
+        #header-menu:active, #header-help:active {
+            transform: translateY(2px);
+        }
+
+        #header-div {
+            background-color: #282c31;
+            width: 100%;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        #header-div-h1 {
+            color: rgb(214, 198, 198);
+            font-size: 28px;
+            user-select: text;
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }
+
+        #header-div-h1:hover {
+            color: white;
+        }
+
+        #header-button {
+            height: 45px;
+            width: 60px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            font-size: 26px;
+            color: black;
+            background-color: rgb(255, 123, 0);
+            border: 0;
+            border-radius: 4px;
+        }
+
+        #header-button:hover {
+            background-color: rgba(255, 123, 0, 0.788);
+        }
+
+        #header-button:active {
+            background-color: rgba(255, 123, 0, 0.555);
+        }
+
+        /* Ana Alan Düzeni */
+        #main-div {
+            border: 2px solid black;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: row;
+            background-color: #282c31;
+            overflow: hidden;
+        }
+
+        #saved {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            border-right: 2px solid black;
+        }
+
+        #drive-div {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            transition-duration: 0.4s;
+        }
+
+        #about-div-color, #orange-div {
+            height: 50px;
+            border-bottom: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+        }
+
+        #about-div-color {
+            background-color: rgba(255, 255, 0, 0.719);
+        }
+
+        #orange-div {
+            background-color: orangered;
+        }
+
+        #about-div-p, #orange-p {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #orange-p { color: white; }
+        #about-div-p { color: black; }
+
+        .top-buttons-group {
+            display: flex;
+            height: 100%;
+        }
+
+        .top-btn {
+            height: 100%;
+            width: 40px;
+            font-size: 18px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            border: 0;
+            border-left: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #btn1, #btn2 { background-color: #ff1e00; color: white; }
+        #btn1:hover, #btn2:hover { background-color: #c43623; }
+
+        #btn5, #btn6, #btn7 { background-color: yellow; }
+        #btn5:hover, #btn6:hover, #btn7:hover { background-color: rgba(150, 150, 41, 0.479); }
+
+        /* İçerik Kartları Izgarası */
+        .grid-container {
+            padding: 15px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .left, .right {
+            border: 1px solid black;
+            border-radius: 4px;
+            height: 110px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .left-p, .right-p {
+            color: white;
+            font-size: 16px;
+        }
+
+        /* Renkler */
+        #bir { background-color: #00aeedb6; }
+        #bir:hover { background-color: #00aeed85; }
+        #iki { background-color: #4dc24793; }
+        #iki:hover { background-color: #4dc24771; }
+        #uc { background-color: #ff0084a6; }
+        #uc:hover { background-color: #ff008481; }
+        #dort { background-color: rgba(153, 205, 50, 0.623); }
+        #dort:hover { background-color: rgba(153, 205, 50, 0.452); }
+        #bes { background-color: #dd4c39de; }
+        #bes:hover { background-color: #dd4c39a8; }
+        #alti { background-color: #bb0000b7; }
+        #alti:hover { background-color: #bb00009a; }
+
+        /* Klasörler ve Buton Alanları */
+        .folder-container {
+            padding: 0 15px 15px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .folder-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .folder {
+            flex: 1;
+            min-width: 120px;
+            border: 1px solid black;
+            height: 40px;
+            background-color: #125688;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            color: white;
+        }
+
+        .folder:hover { background-color: #12578898; }
+
+        .folder-p {
+            font-size: 16px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .action-buttons button {
+            flex: 1;
+            height: 45px;
+            font-size: 16px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            border: 0;
+            border-radius: 4px;
+            color: white;
+        }
+
+        #btn3, #drive-btn-1 { background-color: #ff0084; }
+        #btn3:hover, #drive-btn-1:hover { background-color: #ff0084c5; }
+        #btn4, #drive-btn-2 { background-color: #990edf; }
+        #btn4:hover, #drive-btn-2:hover { background-color: #990edfb0; }
+
+        /* Drive İçeriği */
+        #drive-div-2 {
+            padding: 15px;
+        }
+
+        #drive-p-1, #your-files {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 8px;
+            user-select: text;
+        }
+
+        .range-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .range-p {
+            color: white;
+            font-size: 16px;
+            user-select: text;
+        }
+
+        #range {
+            flex: 1;
+        }
+
+        #extra-drive {
+            display: block;
+            width: 100%;
+            height: 40px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 0;
+            outline: none;
+            color: white;
+            cursor: pointer;
+            background-color: #ff0084;
+            transition-duration: 0.4s;
+            margin-top: 10px;
+        }
+
+        #extra-drive:hover { background-color: #ff0084c0; }
+
+        #drive-hr {
+            margin: 15px 0;
+            border: 0;
+            border-top: 1px solid black;
+        }
+
+        #drive-div-3 {
+            padding: 0 15px 15px 15px;
+        }
+
+        /* Footer */
+        #footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #22252a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            z-index: 1000;
+        }
+
+        #language-button, #dark-mode-button {
+            height: 36px;
+            padding: 0 12px;
+            border: 0;
+            outline: none;
+            font-size: 14px;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }
+
+        #language-button { background-color: crimson; }
+        #language-button:hover { background-color: rgb(182, 25, 57); }
+
+        #dark-mode-button { background-color: rgb(26, 25, 25); }
+        #dark-mode-button:hover { background-color: rgb(0, 0, 0); }
+
+        #resume-button {
+            background-color: #bb0000;
+            border: 0;
+            height: 36px;
+            padding: 0 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+            font-size: 15px;
+            transition-duration: 0.4s;
+            outline: none;
+        }
+
+        #resume-button:hover { background-color: #bb0000c9; }
+
+        /* Responsive Tasarım (Mobil & Tablet) */
+        @media (max-width: 900px) {
+            #main-div {
+                flex-direction: column;
+                width: 95%;
+                margin-top: 20px;
+            }
+
+            #saved, #drive-div {
+                width: 100%;
+                border-right: none;
+            }
+
+            #saved {
+                border-bottom: 2px solid black;
+            }
+
+            #header-h1 {
+                font-size: 26px;
+            }
+
+            #header-div-h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <img src="./Logo.jpg" id="header-img" alt="I LIKE IT Logo">
+        <h1 id="line">|</h1>
+        <h1 id="header-h1">I LIKE IT</h1>
+        <div class="header-right-group">
+            <button id="header-menu">📂</button>
+            <button id="header-help">?</button>
+        </div>
+    </header>
+
+    <div id="header-div">
+        <h1 id="header-div-h1">Kaydettiklerin - Drive</h1>
+        <button id="header-button">⚙</button>
+    </div>
+
+    <div id="main-div">
+
+        <div id="saved">
+            <div id="orange-div">
+                <p id="orange-p">Kaydettiklerin</p> 
+                <div class="top-buttons-group">
+                    <button class="top-btn" id="btn1">🔓</button>
+                    <button class="top-btn" id="btn2">⚙</button>
+                </div>
+            </div>
+
+            <div class="grid-container">
+                <div class="left" id="bir"><p class="left-p">Sosyal Ağ Kesitler #1</p></div>
+                <div class="left" id="iki"><p class="left-p">LCDP Fragman</p></div>
+                <div class="left" id="uc"><p class="left-p">HTSDOF Şarkı - 17</p></div>
+
+                <div class="right" id="dort"><p class="right-p">Hey!</p></div>
+                <div class="right" id="bes"><p class="right-p">4.Sıradayım!</p></div>
+                <div class="right" id="alti"><p class="right-p">TR</p></div>
+            </div>
+
+            <div class="folder-container">
+                <div class="folder-row">
+                    <div class="folder" id="saved-folder-1"><p class="folder-p">Sosyal Ağ</p></div>
+                    <div class="folder" id="saved-folder-2"><p class="folder-p">Filmler</p></div>
+                </div>
+                <div class="action-buttons">
+                    <button id="btn3">+ Yeni Koleksiyon</button>
+                    <button id="btn4">Koleksiyonlarım</button>
+                </div>
+            </div>
+        </div>
+    
+        <div id="drive-div">
+            <div id="about-div-color">
+                <p id="about-div-p">I LIKE IT Drive</p>
+                <div class="top-buttons-group">
+                    <button class="top-btn" id="btn5">❌</button>
+                    <button class="top-btn" id="btn6">↗</button>
+                    <button class="top-btn" id="btn7">➖</button>
+                </div>
+            </div>
+
+            <div id="drive-div-2">
+                <p id="drive-p-1">Depolama Alanınız</p>
+                <div class="range-box">
+                    <p class="range-p" id="birincil-p">0 GB</p>
+                    <input type="range" max="100" step="70" id="range">
+                    <p class="range-p" id="ikincil-p">5 GB</p>
+                </div>
+                <button id="extra-drive">+ Alanı arttır</button>
+                <hr id="drive-hr">
+            </div>
+
+            <div id="drive-div-3">
+                <p id="your-files">Dosyaların:</p>
+                <div class="folder-row">
+                    <div class="folder" id="drive-folder-1"><p class="folder-p">Yeni Klasör</p></div>
+                    <div class="folder" id="drive-folder-2"><p class="folder-p">Sohbetler</p></div>
+                </div>
+                <div class="folder-row" style="margin-top: 10px;">
+                    <div class="folder" id="drive-folder-3"><p class="folder-p">Resim</p></div>
+                    <div class="folder" id="drive-folder-4"><p class="folder-p">Galeri</p></div>
+                </div>
+                <div class="action-buttons" style="margin-top: 15px;">
+                    <button id="drive-btn-1">+ Yeni Klasör</button>
+                    <button id="drive-btn-2">⬆ Dosya Yükle</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <footer id="footer">
+        <button id="resume-button">Ana Sayfa'ya Dön</button>
+        <button id="language-button">TR</button>
+        <button id="dark-mode-button">Koyu Mod</button>
+    </footer>
+    
+</body>
+</html>

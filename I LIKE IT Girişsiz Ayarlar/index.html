@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I LIKE IT</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:wght@300&display=swap');
+
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            user-select: none;
+            font-family: calibri, sans-serif;
+        }
+
+        body{
+            background-color: #323a42; 
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 70px;
+        }
+
+        ::selection{
+            color: black;
+            background-color: #d33639;
+        }
+
+        #header{
+            background-color: #45668e;
+            width: 100%;
+            height: 82px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            position: relative;
+        }
+
+        #header-img{
+            height: 52px;
+            width: 52px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            object-fit: cover;
+        }
+
+        #header-img:hover{
+            filter: saturate(2);
+        }
+
+        #line{
+            font-family: roboto, sans-serif;
+            font-size: 45px;
+            margin: 0 10px;
+            color: #000;
+        }
+
+        #header-h1{
+            font-family: kalam, cursive;
+            font-size: 32px;
+            cursor: pointer;
+            transition-duration: 0.1s;
+        }
+
+        #header-h1:active{
+            transform: translateY(2px);
+        }
+
+        #header-h1:hover{
+            color: #323a42;    
+        }
+
+        .header-right-group {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        #header-menu, #header-help{
+            width: 50px;
+            height: 45px;
+            border: 0px;
+            border-radius: 8px;
+            outline: none;
+            cursor: pointer;
+            font-size: 24px;
+            background: linear-gradient(135deg, #9b27ca 0%, #9927cf 0%, #d33639 100%, #f92121 100%);
+            color: white;
+            transition-duration: 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #header-menu:hover, #header-help:hover{
+            filter:saturate(2);
+        }
+
+        #header-menu:active, #header-help:active{
+            transform: translateY(2px);
+        }
+
+        #main-div{
+            border: 2px solid black;
+            width: 90%;
+            max-width: 700px;
+            margin: 25px auto;
+            border-radius: 6px;
+            background-color: #282c31;
+            overflow: hidden;
+        }
+
+        #main-div-color{
+            background-color: #bb0000;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #main-color-p{
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .setting-row {
+            background-color: rgba(128, 128, 128, 0.363);
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            transition-duration: 0.4s;
+        }
+
+        #div-4 {
+            cursor: pointer;
+        }
+
+        #div-4:hover{
+            background-color: rgba(128, 128, 128, 0.205);
+        }
+
+        #div-4:active{
+            background-color: rgba(128, 128, 128, 0.075);
+        }
+
+        .setting-label {
+            color: white;
+            font-size: 20px;
+            user-select: text;
+        }
+
+        .setting-select {
+            height: 36px;
+            width: 130px;
+            font-size: 16px;
+            border-radius: 3px;
+            text-align: center;
+            outline: none;
+            background-color: #bb0000c9;
+            border: 0px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            color: white;
+        }
+
+        .setting-select:hover{
+            background-color: #bb0000;
+        }
+
+        .hr-1{
+            border: 0;
+            border-top: 1px solid rgba(128, 128, 128, 0.897);
+        }
+
+        #footer{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #22252a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            z-index: 1000;
+        }
+
+        #language-button, #dark-mode-button{
+            height: 36px;
+            padding: 0 12px;
+            border: 0px;
+            outline: none;
+            font-size: 14px;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }
+
+        #language-button{ background-color: crimson; }
+        #language-button:hover{ background-color: rgb(182, 25, 57); }
+
+        #dark-mode-button{ background-color: rgb(26, 25, 25); }
+        #dark-mode-button:hover{ background-color: rgb(0, 0, 0); }
+
+        #resume-button{
+            background-color: #bb0000;
+            border: 0px;
+            height: 36px;
+            padding: 0 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+            font-size: 15px;
+            transition-duration: 0.4s;
+            outline: none;
+        }
+
+        #resume-button:hover{
+            background-color: #bb0000c9;
+        }
+
+        #resume-button:active{
+            background-color: #bb000096;
+        }
+
+        @media (max-width: 600px) {
+            .setting-label {
+                font-size: 16px;
+            }
+            .setting-select {
+                width: 100px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <img src="./Logo.jpg" id="header-img" alt="I LIKE IT Logo">
+        <h1 id="line">|</h1>
+        <h1 id="header-h1">I LIKE IT</h1>
+        <div class="header-right-group">
+            <button id="header-menu">📂</button>
+            <button id="header-help">?</button>
+        </div>
+    </header>
+
+    <div id="main-div">
+
+        <div id="main-div-color">
+            <p id="main-color-p">AYARLAR</p>
+        </div>
+
+        <div class="setting-row" id="div-1">
+            <p class="setting-label" id="div-1-1">Dil: Türkçe</p>
+            <select class="setting-select" id="select-1">
+                <option class="opt" value="1">Türkçe</option>
+                <option class="opt" value="2">English</option>
+                <option class="opt" value="3">Deutsch</option>
+                <option class="opt" value="4">Pусский</option>
+            </select>
+        </div> 
+        <hr class="hr-1">
+
+        <div class="setting-row" id="div-2">
+            <p class="setting-label" id="div-1-2">Bildirimler: Açık</p>
+            <select class="setting-select" id="select-2">
+                <option class="opt" value="1">Açık</option>
+                <option class="opt" value="2">Kapalı</option>
+            </select>
+        </div> 
+        <hr class="hr-1">
+
+        <div class="setting-row" id="div-3">
+            <p class="setting-label" id="div-1-3">Mod: Açık</p>
+            <select class="setting-select" id="select-3">
+                <option class="opt" value="1">Açık</option>
+                <option class="opt" value="2">Loş</option>
+                <option class="opt" value="3">Kapalı</option>
+                <option class="opt" value="4">Renk Körü</option>
+            </select>
+        </div> 
+        <hr class="hr-1">
+
+        <div class="setting-row" id="div-4">
+            <p class="setting-label" id="div-1-4">Gelişmiş Ayarlar</p>
+        </div>
+
+    </div>
+    
+    <footer id="footer">
+        <button id="resume-button">Ana Sayfa'ya Dön</button>
+        <button id="language-button">TR</button>
+        <button id="dark-mode-button">Koyu Mod</button>
+    </footer>
+    
+</body>
+</html>
