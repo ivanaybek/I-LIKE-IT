@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    user-select: none;
+    font-family: calibri;
+}
+
+body{
+    background-color: #323a42; 
+}
+
+::selection{
+    color: white;
+    background-color: #d33639;
+}
+
+#header{
+    background-color: #45668e;
+    width: 100%;
+}
+
+#header-img{
+    height: 62px;
+    width: 62px;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-user-drag: none;
+}
+
+#header-img:hover{
+    filter: saturate(2);
+}
+
+#header-h1{
+    display: inline;
+    position: absolute;
+    margin-top: 14px;
+    margin-left: 20px;
+    font-family: kalam;
+    font-size: 40px;
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+
+#header-h1:active{
+    transform: translateY(2px);
+}
+
+#header-h1:hover{
+    color: #323a42;    
+}
+
+#line{
+    display: inline;
+    position: absolute;
+    font-family: roboto;
+    font-size: 56px;
+    margin-top: 6px;
+}
+
+#header-menu{
+    float: right;
+    margin-right: 10px;
+    margin-top: 16px;
+    width: 120px;
+    height: 50px;
+    border: 0px;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+    background: linear-gradient(135deg, #9b27ca 0%, #9927cf 0%, #d33639 100%, #f92121 100%);
+    padding-bottom: 4px;
+    transition-duration: 0.4s;
+}
+
+#header-menu:hover{
+    filter:saturate(2);
+}
+
+#header-menu:active{
+    transform: translateY(2px);
+}
+
+#footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#language-button{
+    float: left;
+    height: 40px;
+    width: 44px;
+    background-color: crimson;
+    border: 0px;
+    outline: none;
+    font-size: 30px;
+    font-family: calibri;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#language-button:hover{
+    background-color: rgb(182, 25, 57)
+}
+
+#dark-mode-button{
+    float: right;
+    height: 40px;
+    width: 48px;
+    font-family: calibri;
+    text-align: center;
+    background-color: rgb(26, 25, 25);
+    border: 0px;
+    outline: none;
+    font-size: 16px;
+    font-family: calibri;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#dark-mode-button:hover{
+    background-color: rgb(0, 0, 0);
+}
+
+#header-help{
+    float: right;
+    margin-right: 12px;
+    margin-top: 16px;
+    width: 60px;
+    height: 50px;
+    border: 0px;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    font-size: 24px;
+    transition-duration: 0.4s;
+    background: linear-gradient(135deg, #9b27ca 0%, #9927cf 0%, #d33639 100%, #f92121 100%);
+    color: white;
+    transition-duration: 0.4s;
+    padding-bottom: 2px;
+}
+
+#header-help:hover{
+    filter:saturate(2);
+}
+
+#header-help:active{
+    transform: translateY(2px);
+}
+
+#header-div{
+    background-color: #282c31;
+    display: block;
+    width: 100%;
+    height: 74px;
+    position: absolute;
+    top: 80px;
+}
+
+#header-div-h1{
+    color: rgb(214, 198, 198);
+    font-size: 44px;
+    padding-left: 28px;
+    user-select: text;
+    margin-top: 10px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    display: inline-block;
+}
+
+#header-div-h1:hover{
+    color: white;
+}
+
+#header-button{
+    float: right;
+    display: inline;
+    height: 100%;
+    width: 80px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-size: 42px;
+    color: black;
+    background-color: rgb(255, 123, 0);
+    border: 0px;
+}
+
+#header-button:hover{
+    background-color: rgba(255, 123, 0, 0.788);
+}
+
+#header-button:active{
+    background-color: rgba(255, 123, 0, 0.555);
+}
+
+#main-div{
+    border: 1px solid gray;
+    margin-top: 144px;
+    height: 100%;
+    width: 94%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+}
+
+#main-div-color{
+    background-color: #3b5998;
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+#main-div-color-p{
+    color: white;
+    font-size: 28px;
+    display: inline-block;
+    margin-top: 14px;
+    margin-left: 30px; 
+    margin-bottom: 14px;
+    user-select: text;
+}
+
+#main-div-select{
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+    height: 44px;
+    width: 140px;
+    font-size: 24px;
+    outline: none;
+    border-radius: 4px;
+    border: 0px;
+    background-color: #bb0000;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#main-div-select:hover{
+    background-color: #bb0000d8;
+}
+
+.options{
+    background-color: #bb0000d8;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+#notification-1{
+    width: 100%;
+    height: 80px;
+    background-color: #3b589856;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-bottom: 1px solid gray;
+}
+
+#notification-1:hover{
+    background-color: #3b58981e;
+}
+
+#notification-1:active{
+    background-color: #3b589800;
+}
+
+#not-p1{
+    font-size: 26px;
+    display: inline-block;
+    margin-top: 24px;
+    margin-left: 30px;
+    color: white;
+    margin-bottom: 12px;
+    cursor: text;
+}
+
+#not-username1{
+    font-size: 26px;
+    text-decoration: none;
+    color: orange;
+    margin-left: 6px;
+    transition-duration: 0.4s;
+}
+
+#not-username1:hover{
+    color: rgba(255, 166, 0, 0.685);
+}
+
+#not-username1:active{
+    color: crimson;
+}
+
+#notification-2{
+    width: 100%;
+    height: 80px;
+    background-color: #3b589856;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-bottom: solid 1px gray;
+}
+
+#notification-2:hover{
+    background-color: #3b58981e;
+}
+
+#notification-2:active{
+    background-color: #3b589800;
+}
+
+#not-p2{
+    font-size: 26px;
+    display: inline-block;
+    margin-top: 24px;
+    margin-left: 30px;
+    color: white;
+    margin-bottom: 12px;
+    cursor: text;
+}
+
+#not-username2{
+    font-size: 26px;
+    text-decoration: none;
+    color: orange;
+    margin-left: 6px;
+    transition-duration: 0.4s;
+}
+
+#not-username2:hover{
+    color: rgba(255, 166, 0, 0.685);
+}
+
+#not-username2:active{
+    color: crimson;
+}
+
+#notification-resume{
+    display: block;
+    background-color: rgb(110, 0, 110);
+    height: 28px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#notification-resume-p{
+    text-align: center;
+    font-size: 18px;
+}
+
+#notification-resume:hover{
+    background-color: rgba(110, 0, 110, 0.678);
+}
+
+#notification-resume:active{
+    background-color: rgba(110, 0, 110, 0.418);
+}
+
+#notification-2-buttons{
+    float: right;
+    border: 0px;
+    height: 100%;
+    width: 180px;
+    display: inline;
+}
+
+#notification-1-buttons{
+    float: right;
+    border: 0px;
+    height: 100%;
+    width: 180px;
+}
+
+#notification-1-button-1{
+    float: right;
+    height: 100%;
+    width: 52px;
+    background-color: #bb0000;
+    border: 0px;
+    cursor: pointer;
+    font-size: 24px;
+    transition-duration: 0.4s;
+}
+
+#notification-1-button-1:hover{
+    background-color: #bb0000d2;
+}
+
+#notification-1-button-1:active{
+    background-color: #bb000091;
+}
+
+#notification-1-button-2{
+    float: right;
+    height: 100%;
+    width: 52px;
+    border: 0px;
+    cursor: pointer;
+    background-color: orangered;
+    font-size: 24px;
+    transition-duration: 0.4s;
+}
+
+#notification-1-button-2:hover{
+    background-color: rgba(255, 68, 0, 0.788);
+}
+
+#notification-1-button-2:active{
+    background-color: rgba(255, 68, 0, 0.534);
+}
+
+#notification-1-button-3{
+    float: right;
+    height: 100%;
+    width: 52px;
+    border: 0px;
+    cursor: pointer;
+    background-color: rgb(184, 0, 184);
+    font-size: 24px;
+    transition-duration: 0.4s;
+}
+
+#notification-1-button-3:hover{
+    background-color: rgba(184, 0, 184, 0.774);
+}
+
+#notification-1-button-3:active{
+    background-color: rgba(184, 0, 184, 0.5);
+}
+
+#notification-1-button-4{
+    float: right;
+    width: 24px;
+    height: 100%;
+    font-size: 24px;
+    border: 0px;
+    cursor: pointer;
+    background-color: #007ee5;
+    transition-duration: 0.4s;
+}
+
+#notification-1-button-4:hover{
+    background-color: #007ee5b7;
+}
+
+#notification-1-button-4:active{
+    background-color: #007ee57c;
+}
+
+#notification-2-button-1{
+    float: right;
+    height: 100%;
+    width: 52px;
+    background-color: #bb0000;
+    border: 0px;
+    cursor: pointer;
+    font-size: 24px;
+    transition-duration: 0.4s;
+}
+
+#notification-2-button-1:hover{
+    background-color: #bb0000d2;
+}
+
+#notification-2-button-1:active{
+    background-color: #bb000091;
+}
+
+#notification-2-button-2{
+    float: right;
+    height: 100%;
+    width: 52px;
+    border: 0px;
+    cursor: pointer;
+    background-color: orangered;
+    font-size: 24px;
+    transition-duration: 0.4s;
+}
+
+#notification-2-button-2:hover{
+    background-color: rgba(255, 68, 0, 0.788);
+}
+
+#notification-2-button-2:active{
+    background-color: rgba(255, 68, 0, 0.534);
+}
+
+#notification-2-button-3{
+    float: right;
+    height: 100%;
+    width: 52px;
+    border: 0px;
+    cursor: pointer;
+    background-color: rgb(184, 0, 184);
+    font-size: 24px;
+    transition-duration: 0.4s;
+}
+
+#notification-2-button-3:hover{
+    background-color: rgba(184, 0, 184, 0.774);
+}
+
+#notification-2-button-3:active{
+    background-color: rgba(184, 0, 184, 0.5);
+}
+
+#notification-2-button-4{
+    float: right;
+    width: 24px;
+    height: 100%;
+    font-size: 24px;
+    border: 0px;
+    cursor: pointer;
+    background-color: #007ee5;
+    transition-duration: 0.4s;
+}
+
+#notification-2-button-4:hover{
+    background-color: #007ee5b7;
+}
+
+#notification-2-button-4:active{
+    background-color: #007ee57c;
+}
+
+.rozet{
+    height: 20px;
+    border-radius: 100%;
+    margin-left: 20px;
+    position: absolute;
+    margin-top: 30px;
+    -webkit-user-drag: none;
+    transition-duration: 0.4s;
+    filter: saturate(4);
+}
+
+.rozet:active{
+    transition-duration: 0.2s;
+    transform: translateY(2px);
+}
