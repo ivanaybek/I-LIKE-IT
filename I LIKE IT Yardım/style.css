@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    user-select: none;
+    font-family: calibri;
+}
+
+body{
+    background-color: #323a42; 
+}
+
+::selection{
+    color: white;
+    background-color: #d33639;
+}
+
+#header{
+    background-color: #45668e;
+    width: 100%;
+}
+
+#header-img{
+    height: 62px;
+    width: 62px;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-user-drag: none;
+}
+
+#header-img:hover{
+    filter: saturate(2);
+}
+
+#header-h1{
+    display: inline;
+    position: absolute;
+    margin-top: 14px;
+    margin-left: 20px;
+    font-family: kalam;
+    font-size: 40px;
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+
+#header-h1:active{
+    transform: translateY(2px);
+}
+
+#header-h1:hover{
+    color: #323a42;    
+}
+
+#line{
+    display: inline;
+    position: absolute;
+    font-family: roboto;
+    font-size: 56px;
+    margin-top: 6px;
+}
+
+#header-menu{
+    float: right;
+    margin-right: 10px;
+    margin-top: 16px;
+    width: 120px;
+    height: 50px;
+    border: 0px;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+    background: linear-gradient(135deg, #9b27ca 0%, #9927cf 0%, #d33639 100%, #f92121 100%);
+    padding-bottom: 4px;
+    transition-duration: 0.4s;
+}
+
+#header-menu:hover{
+    filter:saturate(2);
+}
+
+#header-menu:active{
+    transform: translateY(2px);
+}
+
+#footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#language-button{
+    float: left;
+    height: 40px;
+    width: 44px;
+    background-color: crimson;
+    border: 0px;
+    outline: none;
+    font-size: 30px;
+    font-family: calibri;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#language-button:hover{
+    background-color: rgb(182, 25, 57)
+}
+
+#dark-mode-button{
+    float: right;
+    height: 40px;
+    width: 48px;
+    font-family: calibri;
+    text-align: center;
+    background-color: rgb(26, 25, 25);
+    border: 0px;
+    outline: none;
+    font-size: 16px;
+    font-family: calibri;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#dark-mode-button:hover{
+    background-color: rgb(0, 0, 0);
+}
+
+#header-help{
+    float: right;
+    margin-right: 12px;
+    margin-top: 16px;
+    width: 60px;
+    height: 50px;
+    border: 0px;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    font-size: 24px;
+    transition-duration: 0.4s;
+    background: linear-gradient(135deg, #9b27ca 0%, #9927cf 0%, #d33639 100%, #f92121 100%);
+    color: white;
+    transition-duration: 0.4s;
+    padding-bottom: 2px;
+}
+
+#header-help:hover{
+    filter:saturate(2);
+}
+
+#header-help:active{
+    transform: translateY(2px);
+}
+
+#header-div{
+    background-color: #282c31;
+    display: block;
+    width: 100%;
+    height: 74px;
+    position: absolute;
+    top: 80px;
+}
+
+#header-div-h1{
+    color: rgb(214, 198, 198);
+    font-size: 44px;
+    padding-left: 28px;
+    user-select: text;
+    margin-top: 10px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    display: inline-block;
+}
+
+#header-div-h1:hover{
+    color: white;
+}
+
+#header-button{
+    float: right;
+    display: inline;
+    height: 100%;
+    width: 80px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-size: 42px;
+    color: black;
+    background-color: rgb(255, 123, 0);
+    border: 0px;
+}
+
+#header-button:hover{
+    background-color: rgba(255, 123, 0, 0.788);
+}
+
+#header-button:active{
+    background-color: rgba(255, 123, 0, 0.555);
+}
+
+#main-div{
+    border: 1px solid gray;
+    margin-top: 144px;
+    height: 100%;
+    width: 94%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+}
+
+#main-div-color{
+    background-color: #3b5998;
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+#main-div-color-p{
+    color: white;
+    font-size: 28px;
+    display: inline-block;
+    margin-top: 14px;
+    margin-left: 30px; 
+    margin-bottom: 14px;
+    user-select: text;
+}
+
+#main-div-select{
+    margin-left: 30px;
+    margin-top: 10px;
+    height: 44px;
+    width: 140px;
+    font-size: 24px;
+    outline: none;
+    border-radius: 4px;
+    border: 0px;
+    background-color: #bb0000;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#main-div-select:hover{
+    background-color: #bb0000d8;
+}
+
+.options{
+    background-color: #bb0000d8;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+#notification-resume{
+    display: block;
+    background-color: rgb(110, 0, 110);
+    height: 28px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#notification-resume-p{
+    text-align: center;
+    font-size: 18px;
+}
+
+#notification-resume:hover{
+    background-color: rgba(110, 0, 110, 0.678);
+}
+
+#notification-resume:active{
+    background-color: rgba(110, 0, 110, 0.418);
+}
+
+#ask-question{
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+    height: 44px;
+    width: 140px;
+    font-size: 24px;
+    outline: none;
+    border-radius: 4px;
+    border: 0px;
+    background-color: #bb0000;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#ask-question:hover{
+    background-color: #bb0000d8;
+}
+
+#ask-question:active{
+    background-color: #bb0000a6;
+}
+
+.div-left{
+    width: 49%;
+    display: inline-block;
+    background-color: #282c31;
+    cursor: pointer;
+    height: 60px;
+    transition-duration: 0.4s;
+    margin-left: 6px;
+}
+
+.div-right{
+    width: 49%;
+    background-color: #282c31;
+    cursor: pointer;
+    height: 60px;
+    transition-duration: 0.4s;
+    float: right;
+    margin-right: 6px;
+}
+
+.div-right:hover{
+    background-color: #474b50;
+}
+
+.div-right:active{
+    background-color: rgb(26, 25, 25);
+}
+
+.div-right-p{
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 14px;
+}
+
+.div-left-p{
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 14px;
+}
+
+.div-left:hover{
+    background-color: #474b50;
+}
+
+.div-left:active{
+    background-color: rgb(26, 25, 25);
+}
+
+
+.hr{
+    border: 1px solid #5a636b;
+}
