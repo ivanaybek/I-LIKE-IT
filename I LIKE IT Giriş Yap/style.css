@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    user-select: none;
+    font-family: calibri;
+}
+
+body{
+    background-color: #323a42; 
+}
+
+::selection{
+    color: black;
+    background-color: #d33639;
+}
+
+#header{
+    background-color: #45668e;
+    width: 100%;
+}
+
+#header-img{
+    height: 62px;
+    width: 62px;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#header-img:hover{
+    filter: saturate(2);
+}
+
+#header-h1{
+    display: inline;
+    position: absolute;
+    margin-top: 14px;
+    margin-left: 20px;
+    font-family: kalam;
+    font-size: 40px;
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+
+#header-h1:active{
+    transform: translateY(2px);
+}
+
+#header-h1:hover{
+    color: #323a42;    
+}
+
+#line{
+    display: inline;
+    position: absolute;
+    font-family: roboto;
+    font-size: 56px;
+    margin-top: 6px;
+}
+
+#header-menu{
+    float: right;
+    margin-right: 10px;
+    margin-top: 16px;
+    width: 120px;
+    height: 50px;
+    border: 0px;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+    background: linear-gradient(135deg, #9b27ca 0%, #9927cf 0%, #d33639 100%, #f92121 100%);
+    padding-bottom: 4px;
+    transition-duration: 0.4s;
+}
+
+#header-menu:hover{
+    filter:saturate(2);
+}
+
+#header-menu:active{
+    transform: translateY(2px);
+}
+
+#footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#language-button{
+    float: left;
+    height: 40px;
+    width: 44px;
+    background-color: crimson;
+    border: 0px;
+    outline: none;
+    font-size: 30px;
+    font-family: calibri;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#language-button:hover{
+    background-color: rgb(182, 25, 57)
+}
+
+#dark-mode-button{
+    float: right;
+    height: 40px;
+    width: 48px;
+    font-family: calibri;
+    text-align: center;
+    background-color: rgb(26, 25, 25);
+    border: 0px;
+    outline: none;
+    font-size: 16px;
+    font-family: calibri;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#dark-mode-button:hover{
+    background-color: rgb(0, 0, 0);
+}
+
+#header-help{
+    float: right;
+    margin-right: 12px;
+    margin-top: 16px;
+    width: 60px;
+    height: 50px;
+    border: 0px;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+    transition-duration: 0.4s;
+    background: linear-gradient(135deg, #9b27ca 0%, #9927cf 0%, #d33639 100%, #f92121 100%);
+    color: white;
+    transition-duration: 0.4s;
+}
+
+#header-help:hover{
+    filter:saturate(2);
+}
+
+#header-help:active{
+    transform: translateY(2px);
+}
+
+#information {
+    width: 100%;
+    background-color: black;
+}
+
+#info-p{
+    color: white;
+    font-family: calibri;
+    font-size: 24px;
+    user-select: text;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+#closebtn {
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 60px;
+    line-height: 20px;
+    cursor: pointer;
+    margin-top: 4px;
+    transition-duration: 0.4s;
+    padding: 10px;
+}
+  
+#closebtn:hover {
+    color: purple;
+}
+
+#closebtn:active{
+    color: yellow;
+}
+
+#info-a{
+    font-family: calibri;
+    font-size: 24px;
+    color: #ff0084;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+#info-a:hover{
+    background-color: #3b5998;
+}
+
+#info-a:active{
+    color: yellow;
+}
+
+#main-div-1{
+    border: 2px solid black;
+    height: 600px;
+    width: 700px;
+    margin-top: 80px;
+    float: left;
+    margin-left: 400px;
+    border-radius: 4px;
+}
+
+#main-div-1-h1{
+    font-weight: bold;
+    font-size: 140px;
+    user-select: text;
+    color: white;
+    margin-left: 80px;
+    margin-top: 0px;
+    display: inline;
+}
+
+#main-div-2-h2{
+    font-weight: bold;
+    font-size: 30px;
+    user-select: text;
+    color: white;
+    margin-left: 46px;
+    margin-top: 70px;
+}
+
+#i-like-it-img{
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 60px;
+    margin-left: 46px;
+}
+
+#main-div-1-p{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    display: inline;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 30px;
+    user-select: text;
+}
+
+#main-div-1-img{
+    height: 92px;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-left: 40px;
+    margin-top: 45px;
+    position: absolute;
+}
+
+#main-div-1-img:hover{
+    filter: saturate(2);
+}
+
+#main-div-2{
+    border: 2px solid black;
+    height: 600px;
+    width: 350px;
+    margin-top: 80px;
+    float: right;
+    margin-right: 400px;
+    border-radius: 6px;
+}
+
+.labels{
+    font-size: 28px;
+    color: white;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#label1{
+    margin-top: 26px;
+}
+
+#email{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    width: 200px;
+    height: 26px;
+    font-size: 16px;
+    margin-top: 4px;
+    outline: none;
+    border: 2px solid rgb(132, 0, 255);
+    padding-left: 6px;
+}
+
+#password{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    width: 200px;
+    height: 26px;
+    font-size: 16px;
+    margin-top: 4px;
+    outline: none;
+    border: 2px solid rgb(132, 0, 255);
+    padding-left: 6px;
+}
+
+#login{
+    margin-top: 18px;
+    background-color: #008cff;
+    width: 120px;
+    margin-left: 116px;
+    user-select: all;
+    transition-duration: 0.4s;
+    height: 44px;
+}
+
+#login:hover{
+    background-color: #008cffbd;
+}
+
+#login:active{
+    transition-duration: 0.2s;
+    transform: translateY(2px);
+}
+
+#register{
+    margin-top: 8px;
+    background-color: #4dc247;
+    width: 160px;
+    margin-left: 96px;
+    user-select: all;
+    transition-duration: 0.4s;
+    height: 44px;
+}
+
+#register:hover{
+    background-color: #4dc247cc;
+}
+
+#register:active{
+    transition-duration: 0.2s;
+    transform: translateY(2px);
+}
+
+hr{
+    border: 1px solid black;
+}
+
+.buttons{
+    border-radius: 4px;
+    border: 0px;
+    cursor: pointer;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+.buttons-p{
+    font-size: 22px;
+    text-align: center;
+}
+
+#main-div-2-head{
+    font-size: 24px;
+    color: white;
+    user-select: text;
+    margin:16px;
+}
+
+#main-div-2-1{
+    border: 1px solid rgb(146, 29, 52);
+    height: 60px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    margin-top: 3px;
+}
+
+#main-div-2-2{
+    border: 1px solid rgb(146, 29, 52);
+    height: 60px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    margin-top: 8px;
+}
+
+#main-div-2-3{
+    border: 1px solid rgb(146, 29, 52);
+    height: 60px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    margin-top: 8px;
+}
+
+#main-div-2-1:active{
+    background-color: rgb(184, 31, 61);
+}
+
+#main-div-2-2:active{
+    background-color: rgb(184, 31, 61);
+}
+
+#main-div-2-3:active{
+    background-color: rgb(184, 31, 61);
+}
+
+#main-div-2-1-img{
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    margin-left: 15px;
+}
+
+#main-div-2-1-img-2{
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    margin-left: 15px;
+}
+
+#main-div-2-1-img-3{
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    margin-left: 15px;
+}
+
+#main-div-2-1-acc-mail{
+    display: inline;
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 4px;
+}
+
+#main-div-2-1-acc-mail-2{
+    display: inline;
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 4px;
+}
+
+#main-div-2-1-acc-mail-3{
+    display: inline;
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 4px;
+}
+
+#main-div-2-1-acc-username{
+    display: inline;
+    font-size: 16px;
+    color: #dd4b39;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 4px;
+}
+
+#main-div-2-1-acc-username-2{
+    display: inline;
+    font-size: 16px;
+    color: #dd4b39;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 4px;
+}
+
+#main-div-2-1-acc-username-3{
+    display: inline;
+    font-size: 16px;
+    color: #dd4b39;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 4px;
+}
+
+#main-div-2-1-acc-main-login-button{
+    width: 80px;
+    background-color: black;
+    color: white;
+    border: 0px;
+    height: 30px;
+    float: right;
+    margin-top: 12px;
+    margin-right: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+    transition-duration: 0.4s;
+}
+
+#main-div-2-1-acc-main-login-button-2{
+    width: 80px;
+    background-color: black;
+    color: white;
+    border: 0px;
+    height: 30px;
+    float: right;
+    margin-top: 12px;
+    margin-right: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+    transition-duration: 0.4s;
+}
+
+#main-div-2-1-acc-main-login-button-3{
+    width: 80px;
+    background-color: black;
+    color: white;
+    border: 0px;
+    height: 30px;
+    float: right;
+    margin-top: 12px;
+    margin-right: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+    transition-duration: 0.4s;
+}
+
+#main-div-2-1-acc-main-login-button:hover{
+    background-color: rgb(39, 36, 36);
+}
+
+#main-div-2-1-acc-main-login-button-2:hover{
+    background-color: rgb(39, 36, 36);
+}
+
+#main-div-2-1-acc-main-login-button-3:hover{
+    background-color: rgb(39, 36, 36);
+}
+
+#main-div-2-1-acc-main-login-button:active{
+    background-color: rgb(61, 55, 55);
+}
+
+#main-div-2-1-acc-main-login-button-2:active{
+    background-color: rgb(61, 55, 55);
+}
+
+#main-div-2-1-acc-main-login-button-3:active{
+    background-color: rgb(61, 55, 55);
+}
