@@ -1,0 +1,6 @@
+Kalan Görevler;
+
+* Responsive Web Design
+* Açık-Koyu temalar
+* Bazı yerleştirmeler
+* Javascript-Php
